@@ -1,0 +1,141 @@
+@use "variables";
+@use "mixins";
+
+body {
+  font-family: "Rubik", serif;
+}
+
+#header {
+  #pattern-bg-desktop {
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .bg-custom-blue {
+    background-color: variables.$custom-blue;
+  }
+
+  #search {
+    font-size: variables.$text-input;
+
+    &::placeholder {
+      color: variables.$dark-gray;
+    }
+  }
+}
+
+#main {
+  .info-title {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: variables.$dark-gray;
+    font-weight: bold;
+  }
+
+  .info-body {
+    font-size: 1.2em;
+    color: variables.$very-dark-gray;
+    font-weight: 500;
+  }
+
+  #map {
+    height: calc(100vh - 300px) !important;
+  }
+}
+
+#teste {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.mt-6 {
+  margin-top: 6rem !important;
+}
+
+.alert-custom {
+  position: absolute;
+  top: 1em;
+  right: 50%;
+  transform: translateX(50%);
+  animation: alert 0.2s linear forwards;
+}
+
+@keyframes alert {
+  from {
+    transform: translate(50%, -100%);
+  }
+
+  to {
+    transform: translateY(50%, 0);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+// small devices
+@media (min-width: 576px) {
+  .p-sm-0 {
+    padding: 0 !important;
+  }
+
+  .mt-sm-0 {
+    margin-top: 0 !important;
+  }
+
+  #main {
+    #map {
+      height: calc(100vh - 280px) !important;
+    }
+
+    .after-border-sm {
+      position: relative;
+  
+      &::after {
+        @include mixins.after-border;
+        height: 100%;
+      }
+    }
+
+    .info-body {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .info-body {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  #main {
+    .after-border, .after-border-lg {
+      position: relative;
+
+      &::after {
+        @include mixins.after-border;
+        height: 75%;
+        margin: 0.8em 0;
+      }
+    }
+
+    .pe-lg-5 {
+      padding-right: 3rem !important;}
+    }
+}
+
+@media (min-width: 1440px) {
+  .container-custom {
+    max-width: 1440px !important;
+  }
+}

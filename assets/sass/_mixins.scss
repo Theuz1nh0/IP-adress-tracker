@@ -1,0 +1,19 @@
+@use "variables";
+
+@mixin after-border {
+  content: "";
+  display: block;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: variables.$dark-gray;
+}
+
+%after-border {
+  position: relative;
+
+  &::after {
+    @include after-border;
+  }
+}

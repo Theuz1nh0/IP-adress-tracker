@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+
+    <!-- jquery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- text fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- leaftlesjs -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+
+  <body>
+    <header class="position-relative bg-cusotm-blue" id="header">
+      <!-- background image -->
+      <div class="container-fluid container-custom p-0 bg-custom-blue">
+        <img
+          class="d-none d-sm-block img-fluid"
+          src="./assets/img/pattern-bg-desktop.png"
+          alt="pattern background desktop"
+          id="pattern-bg-desktop"
+        />
+
+        <img
+          class="d-sm-none img-fluid mx-auto d-block"
+          src="./assets/img/pattern-bg-mobile.png"
+          alt="pattern background mobile"
+        />
+      </div>
+
+      <!-- search field  -->
+      <div class="position-absolute top-0 start-50 translate-middle-x w-100">
+        <div class="container mt-4 pt-2">
+          <h1 class="text-center h2 text-white">IP Address Tracker</h1>
+
+          <div class="row mt-4">
+            <div class="col-xl-5 col-lg-6 col-sm-9 mx-auto px-4 p-sm-0">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control py-3 px-4 rounded-start-4"
+                  placeholder="Search for any IP address or domain"
+                  aria-label="Recipient's username"
+                  aria-describedby="btnSearch"
+                  id="inptSearch"
+                />
+
+                <button
+                  class="btn btn-outline-secondary bg-black rounded-end-4 px-4"
+                  type="button"
+                  id="btnSearch"
+                >
+                  <img src="./assets/img/icon-arrow.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- response -->
+    <main class="position-relative" id="main">
+      <div class="position-absolute start-50 top-0 translate-middle w-100 z-3">
+        <div class="container-lg container-fluid mt-6 pt-4 mt-sm-0 pt-sm-0">
+          <div class="row mx-2 mx-lg-0">
+            <div class="col-12 col-xl-10 mx-auto">
+              <div class="row bg-white ps-3 pe-4 py-4 rounded-4 text-center text-lg-start">
+                <div class="col-12 col-sm-6 col-lg-3 after-border-sm after-border-lg">
+                  <span class="info-title">IP Address</span>
+                  <div class="info-body mt-1" id="ipAddress">192.212.174.101</div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 px-4 after-border-lg mt-3 mt-sm-0">
+                  <span class="info-title">Location</span>
+                  <div class="info-body mt-1" id="location">Brooklyn, NY 10001</div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 px-4 after-border-sm after-border-lg mt-3 mt-sm-0">
+                  <span class="info-title">Timezone</span>
+                  <div class="info-body mt-1" id="timezone">UTC-05:00</div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 px-4 pe-lg-4 mt-3 mt-sm-0">
+                  <span class="info-title">ISP</span>
+                  <div class="info-body mt-1" id="isp">SpaceX Starlink</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <div class="container-fluid container-custom p-0">
+          <div class="w-100 z-0" id="map"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="position-absolute bottom-0 start-50 translate-middle-x text-center pb-2">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Theuzinho_</a>.
+      </div>
+    </footer>
+
+    <!-- bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/searchLocation.js"></script>
+    <script src="./assets/js/map.js"></script>
+  </body>
+</html>
