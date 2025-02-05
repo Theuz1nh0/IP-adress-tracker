@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://github.com/Theuz1nh0/IP-adress-tracker)
+- Live Site URL: [Live URL](https://theuz1nh0.github.io/IP-adress-tracker/)
 
 ## My process
 
