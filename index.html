@@ -13,7 +13,7 @@
     />
 
     <!-- jquery -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
 
     <!-- text fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +25,10 @@
 
     <!-- bootstrap -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
 
     <!-- custom css -->
@@ -103,16 +105,28 @@
         <div class="container-lg container-fluid mt-6 pt-4 mt-sm-0 pt-sm-0">
           <div class="row mx-2 mx-lg-0">
             <div class="col-12 col-xl-10 mx-auto">
-              <div class="row bg-white ps-3 pe-4 py-4 rounded-4 text-center text-lg-start">
-                <div class="col-12 col-sm-6 col-lg-3 after-border-sm after-border-lg">
+              <div
+                class="row bg-white ps-3 pe-4 py-4 rounded-4 text-center text-lg-start"
+              >
+                <div
+                  class="col-12 col-sm-6 col-lg-3 after-border-sm after-border-lg"
+                >
                   <span class="info-title">IP Address</span>
-                  <div class="info-body mt-1" id="ipAddress">192.212.174.101</div>
+                  <div class="info-body mt-1" id="ipAddress">
+                    192.212.174.101
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 px-4 after-border-lg mt-3 mt-sm-0">
+                <div
+                  class="col-12 col-sm-6 col-lg-3 px-4 after-border-lg mt-3 mt-sm-0"
+                >
                   <span class="info-title">Location</span>
-                  <div class="info-body mt-1" id="location">Brooklyn, NY 10001</div>
+                  <div class="info-body mt-1" id="location">
+                    Brooklyn, NY 10001
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 px-4 after-border-sm after-border-lg mt-3 mt-sm-0">
+                <div
+                  class="col-12 col-sm-6 col-lg-3 px-4 after-border-sm after-border-lg mt-3 mt-sm-0"
+                >
                   <span class="info-title">Timezone</span>
                   <div class="info-body mt-1" id="timezone">UTC-05:00</div>
                 </div>
@@ -132,7 +146,9 @@
       </div>
     </main>
 
-    <footer class="position-absolute bottom-0 start-50 translate-middle-x text-center pb-2">
+    <footer
+      class="position-absolute bottom-0 start-50 translate-middle-x text-center pb-2"
+    >
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -142,9 +158,21 @@
     </footer>
 
     <!-- bootstrap -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/searchLocation.js"></script>
     <script src="./assets/js/map.js"></script>
